@@ -1,0 +1,33 @@
+
+
+    {% extends "index.html" %}
+
+
+    {% block body %}
+
+    <div class="row center">
+        <h6 class="header col s12 light">As cinco últimas temperaturas</h6>
+      </div>
+
+
+<div class="row center">
+
+
+        {% for dados in temperaturas %}
+
+    <span class="celulas">{{dados}}</span>
+
+
+
+
+        {% endfor %}
+
+        <!-- /.row -->
+
+    {% endblock %}
+    <!-- /.container -->
+	
+
+
+
+    </div>

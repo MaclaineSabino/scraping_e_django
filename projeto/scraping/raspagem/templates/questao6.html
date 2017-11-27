@@ -1,0 +1,40 @@
+
+
+    {% extends "index.html" %}
+
+
+    {% block body %}
+    <div class="row center">
+        <h6 class="header col s12 light">Total gasto por Unidades Federativas sedes da copa do Brasil 2014</h6>
+      </div>
+
+    <table class="striped">
+        <thead>
+          <tr>
+              <th>Unidade Federativa</th>
+              <th>Despesas</th>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for dados in despesas %}
+          <tr>
+            <td>{{dados.0}}</td>
+            <td>{{dados.1}}</td>
+
+
+          </tr>
+
+        {% endfor %}
+        </tbody>
+      </table>
+
+    {% endblock %}
+    <!-- /.container -->
+	
+
+
+
+    </div>

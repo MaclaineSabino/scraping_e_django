@@ -1,0 +1,45 @@
+
+    {% extends "index.html" %}
+    
+    {% block body %}
+
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+            	<div id="opcoesmesa">
+                 <a alt="remover uma mesa" title="remover uma mesa" href="{% url 'removermesa' %}"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></a>
+                 <a alt="acrescentar uma mesa" title="acrescentar uma mesa" href="{% url 'acrescentarmesa' %}">	<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+                </div>
+                <h1 class="page-header">Mesas
+                    <small></small>
+                </h1>
+                
+                
+                
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Feature Row -->
+        <div class="row">
+        	{% for mesa in mesas %}
+            <article class="col-md-4 article-intro">
+            	<div class="mesas">
+                
+                	
+                    <h2 class="nome_mesa">{{mesa.nome}}</h2>
+                    
+                
+               
+                
+                </div>
+              </article>
+             {% endfor %}
+            
+        </div>
+        <!-- /.row -->
+
+    {% endblock %}
+    <!-- /.container -->
+	
+	

@@ -1,0 +1,35 @@
+
+    {% extends "index.html" %}
+    
+    {% block body %}
+
+        <table class="striped">
+        <thead>
+          <tr>
+              <th>PAÍS</th>
+              <th>ÁREA</th>
+              <th>POPULAÇÃO</th>
+              <th>DENSIDADE</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for dados in densidades %}
+          <tr>
+            <td>{{dados.1}}</td>
+            <td>{{dados.2}}</td>
+            <td>{{dados.3}}</td>
+            <td>{{dados.4}}</td>
+
+          </tr>
+
+        {% endfor %}
+        </tbody>
+      </table>
+        <!-- /.row -->
+
+    {% endblock %}
+    <!-- /.container -->
+	
+	

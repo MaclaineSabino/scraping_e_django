@@ -1,0 +1,35 @@
+
+    {% extends "index.html" %}
+    
+    {% block body %}
+
+        <table class="striped">
+        <thead>
+          <tr>
+              <th>FILME</th>
+              <th>VALOR ARRECADADO</th>
+              <th>VALOR ACUMULADO</th>
+              <th>NÚMERO DE SEMANAS NO RANKING</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for dados in dados_filme %}
+          <tr>
+            <td>{{dados.filme}}</td>
+            <td>{{dados.valor_arrecadado}}</td>
+            <td>{{dados.valor_acumulado}}</td>
+            <td>{{dados.numero_semanas_no_ranking}}</td>
+
+          </tr>
+
+        {% endfor %}
+        </tbody>
+      </table>
+        <!-- /.row -->
+
+    {% endblock %}
+    <!-- /.container -->
+	
+	

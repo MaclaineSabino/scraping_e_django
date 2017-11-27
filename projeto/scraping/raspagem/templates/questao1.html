@@ -1,0 +1,31 @@
+
+    {% extends "index.html" %}
+    
+    {% block body %}
+
+        <table class="striped">
+        <thead>
+          <tr>
+              <th>FILME</th>
+              <th>AVALIAÇÃO</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for dados in dados_filme %}
+          <tr>
+            <td>{{dados.filme}}</td>
+            <td>{{dados.avaliacao}}</td>
+
+          </tr>
+
+        {% endfor %}
+        </tbody>
+      </table>
+        <!-- /.row -->
+
+    {% endblock %}
+    <!-- /.container -->
+	
+	

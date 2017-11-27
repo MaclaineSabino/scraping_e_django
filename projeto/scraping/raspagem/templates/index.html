@@ -1,0 +1,98 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+  
+  
+
+  <!-- CSS  -->
+  
+  <link href="{% static "css/materialize.css" %}" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/style.css" %}" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/person.css" %}" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+	
+	
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#">ATIVIDADES</a></li>
+  <li><a href="{% url 'questao1' %}">QUESTÃO 1</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'questao2' %}">QUESTÃO 2</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'questao3' %}">QUESTÃO 3</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'questao4' %}">QUESTÃO 4</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'questao5' %}">QUESTÃO 5</a></li>
+  <li class="divider"></li>
+  <li><a href="{% url 'questao6' %}">QUESTÃO 6</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Questões<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+        
+	
+	
+	
+  
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Web Scraping</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Ferramenta de exibição de dados coletados da internet</h5>
+      </div>
+
+      <br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    {% block body %}
+		
+		{% endblock %}
+    <br><br>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Tópicos especiais em sistema de informação</h5>
+          <p class="grey-text text-lighten-4">Disciplina ministrada pelo professor Ely.</p>
+
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="{% static "js/jquery-3.1.0.js" %}"></script>
+  <script src="{% static "js/materialize.js" %}"></script>
+  <script src="{% static "js/init.js" %}"></script>
+
+  </body>
+</html>
